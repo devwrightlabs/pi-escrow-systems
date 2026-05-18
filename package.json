@@ -1,0 +1,46 @@
+{
+  "name": "@devright/pi-bazaar-escrow",
+  "version": "0.1.0",
+  "description": "Strictly typed TypeScript escrow and decentralized commerce engine for Pi Network webview applications.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck"
+  },
+  "keywords": [
+    "pi-network",
+    "escrow",
+    "commerce",
+    "react",
+    "nextjs",
+    "typescript"
+  ],
+  "author": "Devright Labs",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "tsup": "8.5.1",
+    "typescript": "6.0.3"
+  }
+}
