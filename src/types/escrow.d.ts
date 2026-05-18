@@ -6,6 +6,7 @@ export type EscrowState =
   | "REFUNDING"
   | "REFUNDED"
   | "CANCELLED";
+export type PiProtocolVersion = 23;
 export type ParticipantRole = "BUYER" | "SELLER" | "ARBITRATOR" | "CONTRIBUTOR" | "MEDIATOR";
 export type ProofSource = "CAMERA" | "GALLERY";
 export type EscrowNetwork = "pi-mainnet" | "pi-testnet" | "simulation";
@@ -137,7 +138,7 @@ export interface EscrowWasmInstruction {
 
 export interface EscrowWasmPayload {
   contractId: string;
-  protocolVersion: 23;
+  protocolVersion: PiProtocolVersion;
   target: "rust-wasm";
   entrypoint: string;
   instructions: EscrowWasmInstruction[];

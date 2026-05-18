@@ -1,5 +1,7 @@
 import type { EscrowContractBinding, EscrowMetadata, EscrowRecord, EscrowWasmInstruction, EscrowWasmPayload } from "../types/escrow";
 
+export const PI_PROTOCOL_VERSION = 23 as const;
+
 const hashValue = (value: string): string => {
   let hash = 2166136261;
 
@@ -76,7 +78,7 @@ export class PiSmartContractAdapter {
 
       return {
         contractId: binding.contractId,
-        protocolVersion: 23,
+        protocolVersion: PI_PROTOCOL_VERSION,
         target: "rust-wasm",
         entrypoint: "execute_escrow",
         instructions,

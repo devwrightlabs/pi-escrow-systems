@@ -1,5 +1,5 @@
 export { EscrowEngine } from "./core/EscrowEngine";
-export { PiSmartContractAdapter } from "./core/pi-smart-contract-adapter";
+export { PiSmartContractAdapter, PI_PROTOCOL_VERSION } from "./core/pi-smart-contract-adapter";
 
 export { PiFractionalCart } from "./commerce/pi-fractional-cart";
 export { PiMilestoneRelease } from "./commerce/pi-milestone-release";
@@ -54,6 +54,7 @@ export type {
   LockedEscrowRecord,
   MilestoneStatus,
   ParticipantRole,
+  PiProtocolVersion,
   PhotoProof,
   ProofSource,
   ReleasedEscrowRecord,
